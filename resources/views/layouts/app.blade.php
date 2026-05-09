@@ -399,7 +399,7 @@
                     <li class="nav-item ms-lg-2">
                         <form action="{{ route('logout') }}" method="POST" id="logout-form">
                             @csrf
-                            <button class="btn btn-outline-light" type="submit">
+                            <button class="btn btn-outline-danger" type="submit">
                                 <i class="bi bi-box-arrow-right me-1"></i> Logout
                             </button>
                         </form>

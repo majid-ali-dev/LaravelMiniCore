@@ -15,10 +15,12 @@ class PostController extends BaseController
         return view('posts.index', compact('posts'));
     }
 
+
     public function create()
     {
         return view('posts.create');
     }
+
 
     public function store(Request $request)
     {
@@ -35,12 +37,14 @@ class PostController extends BaseController
         return $this->successRedirect('posts.index', 'Post created successfully.');
     }
 
+
     public function edit(Post $post)
     {
         $this->authorize('update', $post);
 
         return view('posts.edit', compact('post'));
     }
+
 
     public function update(Request $request, Post $post)
     {
@@ -59,6 +63,7 @@ class PostController extends BaseController
         return $this->successRedirect('posts.index', 'Post updated successfully.');
     }
 
+    
     public function destroy(Post $post)
     {
         $this->authorize('delete', $post);
